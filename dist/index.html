@@ -50,10 +50,63 @@
         <!-- Para inserir a fotografia, substitua .portrait-placeholder por:
         <img class="portrait" src="assets/barbara.jpg" alt="Bárbara Sackser, médica-veterinária" width="800" height="1000" loading="lazy">
         -->
-        <div class="portrait-placeholder" role="img" aria-label="Espaço reservado para a fotografia profissional da Bárbara">
-          <div class="portrait-frame"><span class="portrait-initials" aria-hidden="true">BS</span><span class="portrait-caption">Fotografia profissional<br>em breve</span></div>
-          <span class="portrait-detail" aria-hidden="true"></span>
-        </div>
+  
+        <div
+          class="photo-carousel"
+          role="region"
+          aria-roledescription="carrossel"
+          aria-label="Fotografias da Bárbara"
+        >
+
+        <img
+          class="carousel-photo"
+          src="assets/barbara2.jpeg"
+          alt="Segunda fotografia da Bárbara Sackser"
+          aria-hidden="true"
+          loading="lazy"
+        >
+
+        <img
+          class="carousel-photo"
+          src="assets/barbara3.jpeg"
+          alt="Terceira fotografia da Bárbara Sackser"
+          aria-hidden="true"
+          loading="lazy"
+        >
+        <img
+          class="carousel-photo"
+          src="assets/barbara.jpeg"
+          alt="Terceira fotografia da Bárbara Sackser"
+          aria-hidden="true"
+          loading="lazy"
+        >
+        <img
+          class="carousel-photo"
+          src="assets/barbara4.jpeg"
+          alt="Terceira fotografia da Bárbara Sackser"
+          aria-hidden="true"
+          loading="lazy"
+        >        
+        
+
+        <div class="photo-controls" hidden>
+          <button type="button" class="photo-prev" aria-label="Foto anterior">
+            <span aria-hidden="true">←</span>
+          </button>
+
+          <span class="photo-count" role="status" aria-live="polite">
+          1 / 3
+          </span>
+
+          <button type="button" class="photo-next" aria-label="Próxima foto">
+            <span aria-hidden="true">→</span>
+          </button>
+  </div>
+</div>  
+
+
+          
+
         <div class="about-copy">
           <p class="eyebrow">SOBRE A BÁRBARA</p>
           <h2 id="titulo-sobre">Um olhar atento<br>para cada paciente.</h2>
@@ -61,7 +114,7 @@
           <p>A consulta é um momento para conhecer o paciente, ouvir o tutor e entender a sua rotina. A partir dessa avaliação, as orientações e o acompanhamento são pensados para as necessidades de cada animal.</p>
           <div class="credentials">
             <p>Bárbara Sackser <span>Médica-veterinária · CRMV-RS 25250</span></p>
-            <p class="qualification">Pós-graduação em Nutrologia de cães e gatos</p>
+          
           </div>
         </div>
       </div>
@@ -72,7 +125,7 @@
         <div class="section-heading"><div><p class="eyebrow">ATENDIMENTOS</p><h2 id="titulo-atendimentos">Cuidado em cada etapa.</h2></div><p>Da consulta ao acompanhamento,<br>atenção às necessidades do seu pet.</p></div>
         <div class="service-list">
           <article class="service-row"><span class="service-number" aria-hidden="true">01</span><h3>Consulta domiciliar</h3><p>Avaliação clínica de cães e gatos no ambiente em que vivem, com orientações para o tutor e acompanhamento conforme o caso.</p><a href="https://wa.me/5551981800397?text=Ol%C3%A1%2C%20B%C3%A1rbara%21%20Gostaria%20de%20saber%20mais%20sobre%20a%20consulta%20domiciliar." target="_blank" rel="noopener noreferrer" aria-label="Saber mais sobre consulta domiciliar pelo WhatsApp"><span aria-hidden="true">↗</span></a></article>
-          <article class="service-row"><span class="service-number" aria-hidden="true">02</span><h3>Orientação nutricional</h3><p>Avaliação da alimentação e da rotina do paciente, com orientações nutricionais individualizadas para cães e gatos.</p><a href="https://wa.me/5551981800397?text=Ol%C3%A1%2C%20B%C3%A1rbara%21%20Gostaria%20de%20saber%20mais%20sobre%20orienta%C3%A7%C3%A3o%20nutricional." target="_blank" rel="noopener noreferrer" aria-label="Saber mais sobre orientação nutricional pelo WhatsApp"><span aria-hidden="true">↗</span></a></article>
+          <article class="service-row"><span class="service-number" aria-hidden="true">02</span><h3>Vacinação, Aplicação de medicamentos</h3><p>Mantenha o calendário de Vacinação do seu pet em dia, sem sair do conforto de casa. Aplicação de medicamentos , Aferição de pressão arterial.</p><a href="https://wa.me/5551981800397?text=Ol%C3%A1%2C%20B%C3%A1rbara%21%20Gostaria%20de%20saber%20mais%20sobre%20orienta%C3%A7%C3%A3o%20nutricional." target="_blank" rel="noopener noreferrer" aria-label="Saber mais sobre orientação nutricional pelo WhatsApp"><span aria-hidden="true">↗</span></a></article>
           <article class="service-row"><span class="service-number" aria-hidden="true">03</span><h3>Cannabis medicinal<br>veterinária</h3><p>Consultas e acompanhamento individualizado, com avaliação da indicação e monitoramento da resposta ao tratamento.</p><a href="https://wa.me/5551981800397?text=Ol%C3%A1%2C%20B%C3%A1rbara%21%20Gostaria%20de%20saber%20mais%20sobre%20a%20consulta%20de%20cannabis%20medicinal%20veterin%C3%A1ria." target="_blank" rel="noopener noreferrer" aria-label="Saber mais sobre cannabis medicinal veterinária pelo WhatsApp"><span aria-hidden="true">↗</span></a></article>
           <article class="service-row"><span class="service-number" aria-hidden="true">04</span><h3>Telemedicina</h3><p>Atendimento à distância, conforme a modalidade aplicável e a avaliação do caso. Entre em contato para verificar a possibilidade.</p><a href="https://wa.me/5551981800397?text=Ol%C3%A1%2C%20B%C3%A1rbara%21%20Gostaria%20de%20verificar%20a%20possibilidade%20de%20atendimento%20por%20telemedicina." target="_blank" rel="noopener noreferrer" aria-label="Consultar possibilidade de telemedicina pelo WhatsApp"><span aria-hidden="true">↗</span></a></article>
         </div>

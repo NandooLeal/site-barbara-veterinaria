@@ -40,3 +40,49 @@ if (menuButton && navigation) {
 
 const year = document.querySelector("#ano");
 if (year) year.textContent = new Date().getFullYear();
+
+const photoCarousel = document.querySelector(".photo-carousel");
+
+if (photoCarousel) {
+  const photos = photoCarousel.querySelectorAll(".carousel-photo");
+  const controls = photoCarousel.querySelector(".photo-controls");
+  const previousButton = photoCarousel.querySelector(".photo-prev");
+  const nextButton = photoCarousel.querySelector(".photo-next");
+  const counter = photoCarousel.querySelector(".photo-count");
+
+  let currentPhoto = 0;
+
+  function changePhoto(direction) {
+    currentPhoto =
+      (currentPhoto + direction + photos.length) % photos.length;
+
+    photos.forEach((photo, index) => {
+      const isActive = index === currentPhoto;
+
+      photo.classList.toggle("is-active", isActive);
+      photo.setAttribute("aria-hidden", String(!isActive));
+    });
+
+    counter.textContent = `${currentPhoto + 1} / ${photos.length}`;
+  }
+
+  if (photos.length > 1) {
+    controls.hidden = false;
+    changePhoto(0);
+
+    previousButton.addEventListener("click", () => changePhoto(-1));
+    nextButton.addEventListener("click", () => changePhoto(1));
+
+    photoCarousel.addEventListener("keydown", (event) => {
+      if (event.key === "ArrowLeft") {
+        event.preventDefault();
+        changePhoto(-1);
+      }
+
+      if (event.key === "ArrowRight") {
+        event.preventDefault();
+        changePhoto(1);
+      }
+    });
+  }
+}

@@ -188,3 +188,83 @@ h2 { font-size: clamp(34px, 3.5vw, 46px); line-height: 1.25; letter-spacing: -.8
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; }
 }
+
+/* Fotografias com transição suave */
+.photo-carousel {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--sage);
+}
+
+.carousel-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.carousel-photo.is-active {
+  opacity: 1;
+}
+
+.photo-controls {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 5px;
+  background: var(--cream);
+  border-radius: 40px;
+}
+
+.photo-controls[hidden] {
+  display: none;
+}
+
+.photo-controls button {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--green);
+  font-size: 22px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.photo-controls button:hover {
+  background: var(--sage);
+}
+
+.photo-count {
+  min-width: 38px;
+  text-align: center;
+  font-size: 11px;
+  color: var(--green);
+}
+
+@media (max-width: 760px) {
+  .photo-carousel {
+    max-width: 400px;
+    margin-inline: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carousel-photo {
+    transition: none;
+  }
+}
